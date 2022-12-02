@@ -1,0 +1,41 @@
+#%RAML 1.0
+title: Revision-demo
+description: this api for my revision
+mediaType: 
+- application/json
+protocols: [http,https]
+
+/bankdetails:
+  get:
+    queryParameters:
+      keyword:
+        required: true
+        type: string
+        minLength: 4
+    responses:
+          200:
+                body:
+                    example:
+                      {"masthan" : "sucess get method"}
+
+  post:
+    body:
+      properties:
+      example:
+        {
+        name: "",
+        id: "",
+        email: "",
+        phone: ""
+        }
+      
+    responses:
+          200:
+                body:
+                      example:
+                            {"masthan" : "you done the project"}   
+
+
+                                
+                                                                                           
+
